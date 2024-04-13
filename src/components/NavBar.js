@@ -11,7 +11,7 @@ export default function NavBar(props){
                 </button>
                 <div className="collapse navbar-collapse" id="navbarsExampleDefault">
                     <ul className="navbar-nav mr-auto"  >
-                        {!isAuthenticated()?<li className="nav-item"><Link className="nav-link" to="/register">Register</Link></li>:null}
+                        {!isAuthenticated()?<li className="nav-item"><Link className="nav-link" to="/">Register</Link></li>:null}
                         {!isAuthenticated()?<li><Link className="nav-link" to="/LoginPage" >Login</Link></li>:null}
                         {isAuthenticated()?<li className="nav-item"><Link className="nav-link" to="/DashboardPage" >Dashboard</Link></li>:null}
                         {isAuthenticated()?<li><a className="nav-link"  onClick={props.logoutUser} style={{cursor:"pointer"}} >Logout</a></li>:null}
